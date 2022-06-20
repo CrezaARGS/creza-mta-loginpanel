@@ -1,0 +1,23 @@
+<meta>
+	<info author="[M]ister - mtabrasil.com.br" type="script" version="1.0" name="Painel de Login em HTML" />
+	
+	<script src="login_client.lua" type="client" cache="false" />
+	<script src="login_server.lua" type="server" />
+	
+	<!-- HTML -->
+	<file src="html/login.html" />
+	<file src="html/css/login.css" />
+	<file src="html/css/alert.css" />
+	<file src="html/images/bg.png" />
+	<file src="html/images/fa-eye.png" />
+	<file src="html/images/fa-eye-slash.png" />
+	<file src="html/images/close.png" />
+	<file src="html/images/error.png" />
+	
+	<!-- MUSICAS -->
+	<file src="sfx/doka.mp3" />
+	<file src="sfx/musica.mp3" />
+	<file src="sfx/poc.mp3" />
+	<file src="sfx/alaska.mp3" />	
+</meta>
+	
