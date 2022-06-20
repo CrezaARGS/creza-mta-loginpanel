@@ -1,0 +1,103 @@
+<!--
+
+SparroW MTA Gururla Sunar
+Script Sitemiz : https://sparrow-mta.blogspot.com
+
+ -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Painel de Login MTA:SA</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/login.css">
+		<link rel="stylesheet" href="css/alert.css">
+		<script>
+			//document.body.style.zoom = 0.2 + window.innerHeight / 1080 * 0.8;
+			
+			function closeAlert() {
+				document.getElementById("alert").innerHTML = "";
+			}
+			
+			function login() {
+				var username = document.getElementById("loginUser").value;
+				var password = document.getElementById("loginPass").value;
+				var checksave = document.getElementById("loginSave").checked;
+				mta.triggerEvent("submitLogin", username, password, checksave);
+			}
+			
+			function register() {
+				var username = document.getElementById("registerUser").value;
+				var password = document.getElementById("registerPass").value;
+				var repassword = document.getElementById("registerRepeatPass").value;
+				mta.triggerEvent("submitRegister", username, password, repassword);
+			}
+			
+			function showPass() {
+				var inputpass = document.getElementById("loginPass");
+				var eyeimg = document.getElementsByClassName("show-password")[0];
+				if (inputpass.type === "password") {
+					inputpass.type = "text";
+					eyeimg.src = "images/fa-eye-slash.png";
+				} else {
+					inputpass.type = "password";
+					eyeimg.src = "images/fa-eye.png";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="login-container">
+				<div class="login-wrap">
+			
+					<div id="alert"></div>
+					
+					<div class="login-html">
+						<input id="tab-1" type="radio" name="tab" class="login" checked><label for="tab-1" class="tab">Giriş</label>
+						<input id="tab-2" type="radio" name="tab" class="register"><label for="tab-2" class="tab">Kayıt</label>
+						<div class="login-form">
+							<div class="login-contents">
+								<div class="group">
+									<label for="loginUser" class="label">Kullanıcı Adı</label>
+									<input id="loginUser" type="text" class="input">
+								</div>
+								<div class="group">
+									<label for="loginPass" class="label">Şifre</label>
+									<input id="loginPass" type="password" class="input">
+									<img class="show-password" src="images/fa-eye.png" onclick="showPass()">
+								</div>
+								<div class="group">
+									<input id="loginSave" type="checkbox" class="check">
+									<label for="loginSave"><span class="icon"></span> Bilgileri Hatırla</label>
+								</div>
+								<div class="group">
+									<input type="submit" class="button" value="Giriş" onclick="login()">
+								</div>
+							</div>
+							<div class="register-contents">
+								<div class="group">
+									<label for="registerUser" class="label">Kullanıcı Adı</label>
+									<input id="registerUser" type="text" class="input">
+								</div>
+								<div class="group">
+									<label for="registerPass" class="label">Şifre</label>
+									<input id="registerPass" type="password" class="input">
+								</div>
+								<div class="group">
+									<label for="registerRepeatPass" class="label">Şifre Tekrar</label>
+									<input id="registerRepeatPass" type="password" class="input">
+								</div>
+								<div class="group">
+									<input type="submit" class="button" value="Kayıt OL" onclick="register()">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<audio controls autoplay loop hidden="true">
+		</audio>
+	</body>
+</html>
