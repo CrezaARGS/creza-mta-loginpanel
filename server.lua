@@ -19,7 +19,7 @@ function registerPlayer (rpsetname, username, password )
         --if(password ~= "" and password ~= nil and username ~= "" and username ~= nil) then
             local account = getAccount (username)
 			if (account == false) then
-				local accountAdded = addAccount(username,password) -- Developed: 𝙓𝙧𝙖#1955
+				local accountAdded = addAccount(username,password) -- Developed: Xra#0001
 				print("Voce esta kayıt")
            		--exports.fn_main:intoNewPlayer(rpsetname, username, password)
            		 --triggerClientEvent("succesRegister", root, true, rpsetname, username, password)
