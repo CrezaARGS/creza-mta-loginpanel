@@ -1,5 +1,4 @@
 <meta>
-	<info author="[M]ister - mtabrasil.com.br" type="script" version="1.0" name="Painel de Login em HTML" />
 	
 	<script src="login_client.lua" type="client" cache="false" />
 	<script src="login_server.lua" type="server" />
